@@ -14,7 +14,7 @@
             <div class="header__wrapper page-width">
               <!-- Logo -->
               <div class="header__logo">
-                <a href="/" class="header__logo-text">
+                <a href="./" class="header__logo-text">
                   food
                 </a>
               </div>
@@ -23,19 +23,19 @@
               <nav class="header__nav" role="navigation">
                 <ul class="header__menu">
                   <li class="header__menu-item" data-page="home">
-                    <a href="/">HOME</a>
+                    <a href="./">HOME</a>
                   </li>
                   <li class="header__menu-item" data-page="about">
-                    <a href="/about.html">ABOUT US</a>
+                    <a href="./about.html">ABOUT US</a>
                   </li>
                   <li class="header__menu-item" data-page="services">
-                    <a href="/services.html">SERVICES</a>
+                    <a href="./services.html">SERVICES</a>
                   </li>
                   <li class="header__menu-item" data-page="gallery">
-                    <a href="/gallery.html">GALLERY</a>
+                    <a href="./gallery.html">GALLERY</a>
                   </li>
                   <li class="header__menu-item" data-page="contact">
-                    <a href="/contact.html">CONTACT US</a>
+                    <a href="./contact.html">CONTACT US</a>
                   </li>
                 </ul>
               </nav>
@@ -106,7 +106,7 @@
               <div class="footer__grid">
                 <!-- Brand Column -->
                 <div class="footer__column footer__column--info">
-                  <a href="/" class="footer__logo-text">food</a>
+                  <a href="./" class="footer__logo-text">food</a>
                   <p class="footer__description">Delicious food for everyone. Fresh ingredients, tasty meals, delivered to your door.</p>
                   <ul class="footer__social">
                     <li>
@@ -130,10 +130,10 @@
                 <div class="footer__column">
                   <h3>Menu</h3>
                   <ul class="footer__menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/shop">Shop</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./shop">Shop</a></li>
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./contact">Contact</a></li>
                   </ul>
                 </div>
           
@@ -168,25 +168,6 @@
             </div>
           </footer>
     </div>
-    <script>
-        function loadHTML(selector, file) {
-            fetch(file)
-                .then(response => {
-                    if (!response.ok) throw new Error("Failed to load file.");
-                    return response.text();
-                })
-                .then(data => {
-                    document.querySelector(selector).innerHTML = data;
-                    if (selector === '.header') {
-                        initializeHeader();
-                    }
-                })
-                .catch(error => console.error(error));
-        }
-
-        loadHTML(".header", "/sections/header.html");
-        loadHTML(".footer", "/sections/footer.html");
-    </script>
     <script src="./assets/js/header.js"></script>
 </body>
 </html>
