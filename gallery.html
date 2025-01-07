@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/assets/gallery.css">
+    <link rel="stylesheet" href="/assets/header.css">   
+    <link rel="stylesheet" href="/assets/footer.css">
+</head>
+<body>
+    <div class="header"></div>
+    <main>
+        <!-- write code here -->
+    </main>
+    <div class="footer"></div>
+    
+    <script>
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load file.");
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                    if (selector === '.header') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        loadHTML(".header", "/sections/header.html");
+        loadHTML(".footer", "/sections/footer.html");
+    </script>
+    <script src="assets/header.js"></script>
+</body>
+</html>

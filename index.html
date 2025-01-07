@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/header.css">
+    <link rel="stylesheet" href="assets/footer.css">
+    <link rel="stylesheet" href="/assets/slideshow.css"> 
+</head>
+<body>
+    <header class="header">
+        <!-- Your header content will be loaded here -->
+    </header>
+    <main>
+        <section id="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="/assets/bannar.jpg" alt="Banner 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/assets/bannar2.jpg" alt="Banner 2">
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button class="slide-nav prev" onclick="changeSlide(-1)">❮</button>
+                <button class="slide-nav next" onclick="changeSlide(1)">❯</button>
+                
+                <!-- Navigation dots -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer"></div>
+    
+    <script>
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load file.");
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                    // Initialize header script after content is loaded
+                    if (selector === '.header') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        // Load header and footer
+        loadHTML(".header", "/sections/header.html");
+        loadHTML(".footer", "/sections/footer.html");
+    </script>
+    <script src="/assets/header.js"></script>
+    <script src="/assets/slideshow.js"></script>
+</body>
+</html>

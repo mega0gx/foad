@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="/assets/services.css">
+    <link rel="stylesheet" href="/assets/header.css">   
+    <link rel="stylesheet" href="/assets/footer.css">
+</head>
+<body>
+    <div class="header"></div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Services</h1>
+                <p>Nurturing Nature, Delivering Excellence</p>
+            </div>
+        </section>
+
+        <section class="services-intro">
+            <div class="container">
+                <h2>What We Offer</h2>
+                <p>From farm to table, we provide comprehensive solutions that ensure quality, sustainability, and satisfaction at every step of the journey.</p>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="container">
+                <div class="service-card">
+                    <div class="icon">🌾</div>
+                    <h3>Fresh Produce Export</h3>
+                    <p>Direct farm-to-market distribution of premium fruits and vegetables, maintaining natural freshness and nutritional value throughout the journey.</p>
+                    <ul>
+                        <li>Quality Selection</li>
+                        <li>Fresh Harvesting</li>
+                        <li>Global Distribution</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">❄️</div>
+                    <h3>Frozen Solutions</h3>
+                    <p>State-of-the-art freezing technology that preserves the taste, texture, and nutrients of your favorite produce for extended shelf life.</p>
+                    <ul>
+                        <li>Flash Freezing</li>
+                        <li>Temperature Control</li>
+                        <li>Extended Freshness</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📦</div>
+                    <h3>Custom Packaging</h3>
+                    <p>Innovative packaging solutions designed to protect products during transit while meeting specific client requirements and sustainability goals.</p>
+                    <ul>
+                        <li>Eco-friendly Options</li>
+                        <li>Custom Designs</li>
+                        <li>Protective Solutions</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🚛</div>
+                    <h3>Supply Chain Management</h3>
+                    <p>End-to-end logistics solutions ensuring timely delivery and maintaining product quality throughout the distribution network.</p>
+                    <ul>
+                        <li>Global Network</li>
+                        <li>Real-time Tracking</li>
+                        <li>Quality Assurance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🏆</div>
+                    <h3>Quality Certification</h3>
+                    <p>Rigorous quality control processes and international certification standards to guarantee premium-grade products.</p>
+                    <ul>
+                        <li>ISO Certification</li>
+                        <li>Quality Testing</li>
+                        <li>Safety Standards</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Market Advisory</h3>
+                    <p>Expert guidance on market trends, consumer preferences, and product selection to optimize your business strategy.</p>
+                    <ul>
+                        <li>Market Analysis</li>
+                        <li>Trend Insights</li>
+                        <li>Strategy Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer"></div>
+    
+    <script>
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                    if (selector === '.header') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        loadHTML(".header", "/sections/header.html");
+        loadHTML(".footer", "/sections/footer.html");
+    </script>
+    <script src="assets/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Remove old header styles since we're using header.css */
+/* Remove old footer styles since we're using footer.css */
+
+/* Banner Section */
+.banner {
+    display: flex;
+    background-color: #4a6e4d;
+    color: #ffffff;
+    padding: 40px;
+    height: 70vh;
+    position: relative;
+    margin-top: 80px; /* Added to account for fixed header */
+}
+
+.banner-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-text h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+
+.shop-button {
+    background-color: #ffffff;
+    color: #4a6e4d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.shop-button:hover {
+    background-color: #dddddd;
+}
+
+/* Banner Image */
+.banner-image {
+    flex: 1;
+    position: relative;
+}
+
+.banner-image img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Products Section */
+#products {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#products h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.product {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product h3 {
+    color: #4a6e4d;
+    margin-top: 0;
+}
+
+.product button {
+    background-color: #4a6e4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #3a5e3d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 990px) {
+    .banner {
+        flex-direction: column;
+        height: auto;
+        margin-top: 60px; /* Adjusted for mobile header height */
+    }
+
+    .banner-image {
+        height: 300px;
+    }
+
+    .banner-image img {
+        position: relative;
+        height: 100%;
+    }
+
+    .banner-text {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner {
+        padding: 20px;
+    }
+
+    .banner-text h2 {
+        font-size: 2em;
+    }
+
+    .banner-image {
+        height: 200px;
+    }
+} 

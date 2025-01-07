@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/assets/about.css">
+    <link rel="stylesheet" href="/assets/header.css">   
+    <link rel="stylesheet" href="/assets/footer.css">
+</head>
+<body>
+    <div class="header"></div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Story</h1>
+                <p>Cultivating Health, Harvesting Happiness</p>
+            </div>
+        </section>
+
+        <section class="our-mission">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>We believe that good food is the foundation of a healthy life. Since 2010, we've been connecting local farmers with conscious consumers, bringing the freshest organic produce from farm to table.</p>
+            </div>
+        </section>
+
+        <section class="values-grid">
+            <div class="container">
+                <div class="value-card">
+                    <img src="img/organic.svg" alt="Organic farming">
+                    <h3>100% Organic</h3>
+                    <p>We partner exclusively with certified organic farmers who share our commitment to sustainable agriculture.</p>
+                </div>
+                <div class="value-card">
+                    <img src="img/local.svg" alt="Local sourcing">
+                    <h3>Local First</h3>
+                    <p>By sourcing locally, we reduce our carbon footprint and support our community's economic growth.</p>
+                </div>
+                <div class="value-card">
+                    <img src="img/sustainable.svg" alt="Sustainability">
+                    <h3>Sustainable Practices</h3>
+                    <p>From farm to packaging, we ensure every step of our process respects our environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="journey">
+            <div class="container">
+                <div class="journey-content">
+                    <h2>Our Journey</h2>
+                    <p>What started as a small family farm has grown into a movement. Today, we work with over 100 local farmers, delivering fresh, organic produce to thousands of families across the region.</p>
+                    <p>Our commitment to sustainable agriculture isn't just about producing food – it's about nurturing our planet and creating a healthier future for generations to come.</p>
+                </div>
+                <div class="journey-image">
+                    <img src="img/farm-life.jpg" alt="Our farm life">
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer"></div>
+    
+    <script>
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load file.");
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                    if (selector === '.header') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        loadHTML(".header", "/sections/header.html");
+        loadHTML(".footer", "/sections/footer.html");
+    </script>
+    <script src="assets/header.js"></script>
+</body>
+</html>

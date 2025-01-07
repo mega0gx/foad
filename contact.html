@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/assets/contact.css">
+    <link rel="stylesheet" href="/assets/header.css">   
+    <link rel="stylesheet" href="/assets/footer.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header"></div>
+    <main>
+        <section>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="info-content">
+                        <h2>Contact Information</h2>
+                        <p>Get in touch with us for any questions about our organic products</p>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p><a href="mailto:contact@yourcompany.com">contact@yourcompany.com</a></p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <p>123 Organic Street, Nature City, Earth</p>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://facebook.com/yourpage" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/yourpage" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/yourpage" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contactForm">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" onsubmit="return sendEmail(event)">
+                        <div class="formBox">
+                            <div class="inputBox w50">
+                                <input type="text" name="firstName" required>
+                                <span>First Name</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="text" name="lastName" required>
+                                <span>Last Name</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="email" name="email" required>
+                                <span>Email Address</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="tel" name="phone" required>
+                                <span>Phone Number</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <textarea name="message" required></textarea>
+                                <span>Write your message here...</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text"></span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer"></div>
+    
+    <script>
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                    if (selector === '.header') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+        loadHTML(".header", "/sections/header.html");
+        loadHTML(".footer", "/sections/footer.html");
+
+        // Email sending function using EmailJS
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const originalBtnText = btnText.textContent;
+            
+            // Show loading state
+            btnText.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Initialize EmailJS with your user ID
+            emailjs.init("YOUR_USER_ID");
+
+            // Prepare template parameters
+            const templateParams = {
+                from_name: `${form.firstName.value} ${form.lastName.value}`,
+                from_email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value
+            };
+
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    btnText.textContent = 'Message Sent!';
+                    form.reset();
+                    setTimeout(() => {
+                        btnText.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    btnText.textContent = 'Failed to send';
+                    setTimeout(() => {
+                        btnText.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                });
+
+            return false;
+        }
+    </script>
+    <script src="assets/header.js"></script>
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
