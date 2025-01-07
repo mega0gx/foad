@@ -1,0 +1,2 @@
+document.getElementsByClassName("header").innerHTML = fetch('./sections/header.html').then(res => res.text());
+document.getElementsByClassName("footer").innerHTML = fetch('./sections/footer.html').then(res => res.text());
