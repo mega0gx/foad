@@ -1,4 +1,3 @@
-console.log("header header");
 function initializeHeader() {
   const header = document.querySelector('.header');
   let lastScroll = 0;
