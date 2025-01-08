@@ -1,4 +1,5 @@
 /* Base Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,144 +7,72 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Remove old header styles since we're using header.css */
-/* Remove old footer styles since we're using footer.css */
 
-/* Banner Section */
-.banner {
-    display: flex;
-    background-color: #4a6e4d;
-    color: #ffffff;
-    padding: 40px;
-    height: 70vh;
-    position: relative;
-    margin-top: 80px; /* Added to account for fixed header */
-}
+/* hero section  */
 
-.banner-text {
-    flex: 1;
-    padding: 20px;
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/services-hero.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-.banner-text h2 {
-    font-size: 2.5em;
-    margin: 0 0 10px;
-}
-
-.banner-text p {
-    font-size: 1.2em;
-    margin: 0 0 20px;
-}
-
-.shop-button {
-    background-color: #ffffff;
-    color: #4a6e4d;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: fit-content;
-}
-
-.shop-button:hover {
-    background-color: #dddddd;
-}
-
-/* Banner Image */
-.banner-image {
-    flex: 1;
-    position: relative;
-}
-
-.banner-image img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: none;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-top: 20px;
-}
-
-/* Products Section */
-#products {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#products h2 {
+    color: rgb(255, 255, 255);
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+    margin-top: -80px;
+    padding-top: 80px;
 }
 
-.product {
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
-.product h3 {
-    color: #4a6e4d;
-    margin-top: 0;
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
-.product button {
-    background-color: #4a6e4d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+
+/* Animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.product button:hover {
-    background-color: #3a5e3d;
-}
 
 /* Responsive Design */
-@media screen and (max-width: 990px) {
-    .banner {
-        flex-direction: column;
-        height: auto;
-        margin-top: 60px; /* Adjusted for mobile header height */
-    }
 
-    .banner-image {
-        height: 300px;
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
     }
-
-    .banner-image img {
-        position: relative;
-        height: 100%;
+    .services-grid .container {
+        grid-template-columns: 1fr;
     }
-
-    .banner-text {
-        text-align: center;
-        align-items: center;
+    .service-card {
+        margin: 0 1rem;
     }
 }
 
-@media screen and (max-width: 576px) {
-    .banner {
-        padding: 20px;
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
-
-    .banner-text h2 {
-        font-size: 2em;
+    .hero-content p {
+        font-size: 1.2rem;
     }
-
-    .banner-image {
-        height: 200px;
+    .services-intro h2 {
+        font-size: 2rem;
     }
-} 
+}

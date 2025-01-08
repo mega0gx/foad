@@ -93,6 +93,16 @@ section {
     transform: translateY(-3px);
 }
 
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: translateY(-3px);
+}
+
 .contactForm {
     position: relative;
     flex: 1;
@@ -152,7 +162,7 @@ section {
 
 .inputBox span {
     position: absolute;
-    left: 0;    
+    left: 0;
     padding: 10px 0;
     font-size: 16px;
     color: #777;
@@ -160,10 +170,10 @@ section {
     pointer-events: none;
 }
 
-.inputBox input:focus ~ span,
-.inputBox textarea:focus ~ span,
-.inputBox input:valid ~ span,
-.inputBox textarea:valid ~ span {
+.inputBox input:focus~span,
+.inputBox textarea:focus~span,
+.inputBox input:valid~span,
+.inputBox textarea:valid~span {
     transform: translateY(-20px);
     font-size: 12px;
     color: #4a6741;
@@ -194,19 +204,19 @@ section {
     cursor: not-allowed;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 1200px) {
     .container {
         min-width: auto;
         margin: 20px;
         flex-direction: column;
     }
-
     .contactInfo {
         width: 100%;
         min-height: 250px;
     }
-
     .contactForm {
         padding: 30px;
     }
@@ -218,10 +228,16 @@ section {
     }
 }
 
+
 /* Animation for form inputs */
+
 @keyframes focusAnimation {
-    0% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .inputBox input:focus,
@@ -229,8 +245,8 @@ section {
     border-bottom-color: #4a6741;
 }
 
-.inputBox input:focus ~ span::after,
-.inputBox textarea:focus ~ span::after {
+.inputBox input:focus~span::after,
+.inputBox textarea:focus~span::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -241,9 +257,11 @@ section {
     animation: focusAnimation 0.3s ease forwards;
 }
 
+
 /* Add these new rules to remove autofill styling */
+
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -253,12 +271,16 @@ textarea:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+
 /* Optional: If you want to change the autofill text color */
+
 input:-webkit-autofill {
     -webkit-text-fill-color: #333 !important;
 }
 
+
 /* Remove red underline for invalid inputs */
+
 input:invalid,
 textarea:invalid {
     box-shadow: none;
@@ -267,12 +289,16 @@ textarea:invalid {
     text-decoration: none;
 }
 
+
 /* Remove Firefox's default red box-shadow */
+
 :not(output):-moz-ui-invalid {
     box-shadow: none;
 }
 
+
 /* Remove default validation styling */
+
 input:invalid,
 textarea:invalid {
     outline: none;
