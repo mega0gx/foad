@@ -19,7 +19,7 @@ body {
     z-index: 1;
     display: flex;
     align-items: center;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 }
 
 .hero-content {
@@ -73,8 +73,9 @@ body {
 .hero-image {
     flex: 1;
     position: relative;
-    margin-bottom: -20%;
+    margin-bottom: -15%;
     margin-right: -5%;
+    max-height: 600px;
 }
 
 .hero-image img {
@@ -83,6 +84,8 @@ body {
     display: block;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-height: 600px;
+    object-fit: cover;
 }
 
 /* Responsive styles */
@@ -207,11 +210,11 @@ body {
 
 /* cool section */
 .harvest-section {
-    margin-top: 4rem;
+    margin-top: 0;
     position: relative;
     z-index: 0;
     background-color: white;
-    padding-top: 2rem;
+    padding-top: 4rem;
 }
 
 .header-text {
