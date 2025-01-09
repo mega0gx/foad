@@ -1,13 +1,16 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #2F3E2F; /* Dark green background */
+  box-shadow: none;
   transition: transform 0.3s ease-in-out;
-  height: 80px;
+  height: 100px;
 }
 
 .header--hidden {
@@ -16,16 +19,16 @@
 
 /* Add this to account for the fixed header */
 body {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 @media screen and (max-width: 990px) {
   .header {
-    height: 60px;
+    height: 80px;
   }
   
   body {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 
@@ -33,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 0 20px;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -50,10 +53,13 @@ body {
 }
 
 .header__logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Navigation */
@@ -72,12 +78,18 @@ body {
 }
 
 .header__menu-item a {
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.header__menu-item a:hover {
+  color: #8FBC8F; /* Light green on hover */
 }
 
 /* Icons */
@@ -92,21 +104,8 @@ body {
   border: none;
   padding: 5px;
   cursor: pointer;
-  color: #333;
+  color: #ffffff;
   position: relative;
-}
-
-.header__cart-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #000;
-  color: white;
-  font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 10px;
-  min-width: 18px;
-  text-align: center;
 }
 
 /* Mobile Menu Toggle */
@@ -118,7 +117,7 @@ body {
 @media screen and (max-width: 990px) {
   .header__wrapper {
     position: relative;
-    height: 60px;
+    height: 80px;
   }
 
   .header__logo {
@@ -245,4 +244,10 @@ body {
     overflow-x: hidden;
     width: 100%;
   }
+} 
+
+/* Add a new class for when we want the header to be solid */
+.header--scrolled {
+  background: #2C4021; /* Keep dark green when scrolled */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 } 

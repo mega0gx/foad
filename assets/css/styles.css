@@ -8,95 +8,97 @@ body {
 }
 
 
-/* hero section 1  */
-
-/* .hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/services-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: -80px;
-    padding-top: 80px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
-} */
-
-/* hero section 2 */
+/* hero section  */
 .hero {
-    padding: 8rem 5% 4rem;
-    min-height: 100vh;
-    background-color: #f9f9f9;
+    padding: 1rem 5%;
+    background-color: #2F3E2F;
+    color: white;
+    position: relative;
+    overflow: visible;
+    min-height: 80vh;
+    z-index: 1;
     display: flex;
     align-items: center;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .hero-text {
-    flex: 1;
-    max-width: 600px;
-  }
-  
-  .hero-text h1 {
-    font-size: 3.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+    gap: 4rem;
+    padding-top: 2rem;
+}
+
+.hero-text {
+    flex: 0.8;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
     line-height: 1.2;
-  }
-  
-  .hero-text p {
-    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
     margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-  
-  .hero-image {
+    opacity: 0.85;
+}
+
+.learn-more {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.learn-more:hover {
+    background: white;
+    color: #2F3E2F;
+}
+
+.hero-image {
     flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .hero-image img {
+    position: relative;
+    margin-bottom: -30%;
+    margin-right: -5%;
+}
+
+.hero-image img {
     max-width: 100%;
     height: auto;
-  }
-  
-  .shop-now {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .shop-now:hover {
-    background: #45a049;
-  }
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        margin-bottom: -10%;
+    }
+}
+
 /* Improved Responsive Design */
 @media (max-width: 1024px) {
     .hero-text h1 {
@@ -204,8 +206,9 @@ body {
 
 /* cool section */
 .harvest-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(to bottom, #f5f0e6, #ffffff);
+    margin-top: 15rem;
+    position: relative;
+    z-index: 0;
 }
 
 .header-text {
@@ -252,7 +255,7 @@ body {
     background: linear-gradient(145deg, #3c2317, #2a1810);
     border-radius: 20px;
     padding: 8rem 2rem 3rem;
-    margin-top: -150px;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-around;
     color: white;
@@ -374,30 +377,6 @@ body {
     height: 40px;
     background-color: #ff6b6b;
 }
-/* Hero Section */
-.hero {
-    height: 60vh;
-    background: linear-gradient(rgba(18, 158, 0, 0.5), rgba(204, 82, 0, 0.5)), url('../img/products-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin-top: -80px;
-    padding-top: 80px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
 
 /* Animation */
 .animate-hero {
@@ -476,3 +455,6 @@ body {
         font-size: 1.2rem;
     }
 } 
+
+/* Add these font imports at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap'); 

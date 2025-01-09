@@ -1,5 +1,5 @@
 .footer {
-  background-color: #f8f8f8;
+  background-color: #272727;
   padding: 60px 0 20px;
   margin-top: 60px;
 }
@@ -27,14 +27,14 @@
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   display: block;
   margin-bottom: 20px;
   text-transform: lowercase;
 }
 
 .footer__description {
-  color: #666;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.9rem;
@@ -50,12 +50,12 @@
 }
 
 .footer__social a {
-  color: #666;
+  color: #ffffff;
   transition: color 0.2s ease;
 }
 
 .footer__social a:hover {
-  color: #333;
+  color: #ffffff;
 }
 
 /* Menu Columns */
@@ -63,7 +63,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 20px;
-  color: #333;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -79,14 +79,14 @@
 }
 
 .footer__menu a {
-  color: #666;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
 .footer__menu a:hover {
-  color: #333;
+  color: #ffffff;
 }
 
 /* Newsletter */
