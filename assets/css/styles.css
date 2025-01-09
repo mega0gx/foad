@@ -9,6 +9,7 @@ body {
 
 
 /* hero section  */
+
 .hero {
     padding: 1rem 5%;
     background-color: #2F3E2F;
@@ -83,90 +84,87 @@ body {
     height: auto;
     display: block;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-height: 600px;
     object-fit: cover;
 }
 
+
 /* Responsive styles */
+
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
     }
-
     .hero-text h1 {
         font-size: 2.5rem;
     }
-
     .hero-image {
         margin-bottom: -10%;
     }
 }
 
+
 /* Improved Responsive Design */
+
 @media (max-width: 1024px) {
     .hero-text h1 {
         font-size: 3rem;
     }
-    
     .about-content h2 {
         font-size: 2.2rem;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     header {
         padding: 0.8rem 5%;
     }
-  
     .hero {
         padding: 6rem 5% 3rem;
         min-height: auto;
     }
-  
-    .hero-content, .about-wrapper {
+    .hero-content,
+    .about-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
-  
     .hero-text h1 {
         font-size: 2.5rem;
     }
-  
-    .hero-image, .about-image {
+    .hero-image,
+    .about-image {
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
     }
-  
     .nav-links {
         display: none;
     }
-  
     .about {
         padding: 3rem 5%;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .hero {
         padding: 5rem 5% 2rem;
     }
-  
     .hero-text h1 {
         font-size: 2rem;
     }
-  
-    .hero-text p, .about-content p {
+    .hero-text p,
+    .about-content p {
         font-size: 0.9rem;
     }
-  
-    .shop-now, .explore-btn {
+    .shop-now,
+    .explore-btn {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
     }
-  }
+}
+
 
 /* Animations */
 
@@ -208,7 +206,9 @@ body {
     }
 }
 
+
 /* cool section */
+
 .harvest-section {
     margin-top: 0;
     position: relative;
@@ -258,10 +258,10 @@ body {
 }
 
 .stats-container {
-    background: linear-gradient(145deg, #3c2317, #2a1810);
-    padding: 80px 40px 40px;
+    background: linear-gradient(145deg, #3c2317, #7a3b20);
+    padding: 120px 40px 40px;
     border-radius: 20px;
-    margin-top: -40px;
+    margin-top: -60px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -271,10 +271,7 @@ body {
 
 .stats-container:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.25),
-        inset 0 -4px 8px rgba(255, 255, 255, 0.1),
-        inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), inset 0 -4px 8px rgba(255, 255, 255, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .stats-container::before {
@@ -284,12 +281,7 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent
-    );
+    background: linear-gradient( to right, transparent, rgba(255, 255, 255, 0.05), transparent);
     transform: skewX(-15deg);
     pointer-events: none;
 }
@@ -305,6 +297,7 @@ body {
     margin: 0 0 1rem 0;
     font-weight: bold;
     white-space: nowrap;
+    color: white;
 }
 
 .stat-item .number {
@@ -314,6 +307,7 @@ body {
 .stat-item .unit {
     font-size: 1.5rem;
     opacity: 0.9;
+    color: rgb(252, 195, 195);
 }
 
 .stat-item .plus {
@@ -325,6 +319,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     opacity: 0.7;
+    color: #84e00a;
 }
 
 .vegetables-display {
@@ -376,7 +371,9 @@ body {
     background-color: #ff6b6b;
 }
 
+
 /* Animation */
+
 .animate-hero {
     opacity: 0;
     transform: translateY(20px);
@@ -394,7 +391,9 @@ body {
     }
 }
 
+
 /* Products Section */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -443,16 +442,19 @@ body {
     line-height: 1.6;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 3rem;
     }
-    
     .hero-content p {
         font-size: 1.2rem;
     }
-} 
+}
+
 
 /* Add these font imports at the top of your CSS file */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
