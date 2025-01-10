@@ -3,7 +3,7 @@ async function loadProducts() {
         // Fetch the CSV file
         const response = await fetch('./assets/data/products.csv');
         const csvText = await response.text();
-        
+
         // Parse CSV (skip header row)
         const products = csvText
             .split('\n')
@@ -11,20 +11,17 @@ async function loadProducts() {
             .filter(row => row.trim())
             .map(row => {
                 const [name, description] = row.split(',');
-                // Convert product name to lowercase and replace spaces with hyphens for image filename
-                const image = `${name.toLowerCase().replace(/\s+/g, '-')}.jpg`;
-                return { name, description, image };
+                return { name, description };
             });
-
         // Get the container
         const container = document.getElementById('products-container');
-        
+
         // Create product cards
         products.forEach(product => {
             const productCard = `
-                <div class="product-card">
+                <div class="product-card" data-product-id="${product.name}">
                     <div class="product-image">
-                        <img src="./assets/images/products/${product.image}" alt="${product.name}">
+                        <img src="./assets/images/products/${product.name}.jpg" alt="${product.name}">
                     </div>
                     <div class="product-info">
                         <h3>${product.name}</h3>
@@ -34,13 +31,11 @@ async function loadProducts() {
             `;
             container.innerHTML += productCard;
         });
-
     } catch (error) {
         console.error('Error loading products:', error);
-        document.getElementById('products-container').innerHTML = 
+        document.getElementById('products-container').innerHTML =
             '<p class="error">Sorry, failed to load products. Please try again later.</p>';
     }
 }
-
 // Load products when page loads
-document.addEventListener('DOMContentLoaded', loadProducts); 
+document.addEventListener('DOMContentLoaded', loadProducts);

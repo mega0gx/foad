@@ -4,8 +4,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FDF6E3;
 }
+
+
 /* hero section  */
 
 .hero {
@@ -206,6 +208,7 @@ body {
 
 
 /* Products Section */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -254,13 +257,14 @@ body {
     line-height: 1.6;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 3rem;
     }
-    
     .hero-content p {
         font-size: 1.2rem;
     }
-} 
+}
