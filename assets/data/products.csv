@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name,description
 Apples,Fresh and crispy apples rich in antioxidants and fiber. Perfect for snacking or baking.
 Carrots,Sweet organic carrots packed with beta-carotene and vitamins. Great for salads and cooking.
@@ -6,3 +7,8 @@ Bananas,Perfectly ripened bananas rich in potassium. Great for smoothies and sna
 Spinach,Fresh organic spinach leaves packed with iron and vitamins. Perfect for salads and cooking.
 Tomatoes,Juicy red tomatoes grown naturally. Ideal for salads and cooking.
 
+=======
+id,title,description,image
+1,Apple,Rich in antioxidants and dietary fiber, our organic apples promote heart health, boost immunity, and support healthy digestion.,product1.png
+2,Avocado,Loaded with heart-healthy fats fiber and essential nutrients that support glowing skin better digestion and sustained energy.,product2.png
+>>>>>>> 421c5d29f66a04d01feddcc3180401f820832ce2
