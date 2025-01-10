@@ -10,8 +10,10 @@ async function loadProducts() {
             .slice(1)
             .filter(row => row.trim())
             .map(row => {
-                const [id, title, description, image] = row.split(',');
-                return { id, title, description, image };
+                const [name, description] = row.split(',');
+                // Convert product name to lowercase and replace spaces with hyphens for image filename
+                const image = `${name.toLowerCase().replace(/\s+/g, '-')}.jpg`;
+                return { name, description, image };
             });
 
         // Get the container
@@ -20,12 +22,12 @@ async function loadProducts() {
         // Create product cards
         products.forEach(product => {
             const productCard = `
-                <div class="product-card" data-product-id="${product.id}">
+                <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/${product.image}" alt="${product.title}">
+                        <img src="./assets/images/products/${product.image}" alt="${product.name}">
                     </div>
                     <div class="product-info">
-                        <h3>${product.title}</h3>
+                        <h3>${product.name}</h3>
                         <p>${product.description}</p>
                     </div>
                 </div>
