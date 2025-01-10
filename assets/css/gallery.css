@@ -1,34 +1,170 @@
-/* Hero Section */
+/* Base Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* hero section  */
+
 .hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bannar2.jpg');
-    background-size: cover;
-    background-position: center;
+    padding: 1rem 5%;
+    background-color: #2F3E2F;
+    color: white;
+    position: relative;
+    overflow: visible;
+    min-height: 80vh;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 12rem;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-top: 2rem;
+}
+
+.hero-text {
+    flex: 0.8;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.learn-more {
+    background: transparent;
+    border: 1px solid white;
     color: white;
-    text-align: center;
-    margin-top: -80px;
-    padding-top: 80px;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.learn-more:hover {
+    background: white;
+    color: #2F3E2F;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 300;
+.hero-image {
+    flex: 1;
+    position: relative;
+    margin-bottom: -15%;
+    margin-right: -5%;
+    max-height: 600px;
 }
 
-/* Animation */
-.animate-hero {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-height: 600px;
+    object-fit: cover;
 }
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-image {
+        margin-bottom: -10%;
+    }
+}
+
+
+/* Improved Responsive Design */
+
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .about-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 5%;
+    }
+    .hero {
+        padding: 6rem 5% 3rem;
+        min-height: auto;
+    }
+    .hero-content,
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-image,
+    .about-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .nav-links {
+        display: none;
+    }
+    .about {
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 5% 2rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p,
+    .about-content p {
+        font-size: 0.9rem;
+    }
+    .shop-now,
+    .explore-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+
+/* Animations */
 
 @keyframes fadeInUp {
     from {
@@ -40,6 +176,34 @@
         transform: translateY(0);
     }
 }
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .services-grid .container {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .services-intro h2 {
+        font-size: 2rem;
+    }
+}
+
 
 /* Products Section */
 .container {
