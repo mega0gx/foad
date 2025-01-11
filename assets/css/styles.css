@@ -1,5 +1,4 @@
 /* Base Styles */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,20 +6,17 @@ body {
     background-color: #FDF6E3;
 }
 
-
-/* hero section  */
-
+/* Hero section */
 .hero {
     padding: 1rem 5%;
     background-color: #2F3E2F;
     color: white;
     position: relative;
-    overflow: visible;
     min-height: 80vh;
     z-index: 1;
     display: flex;
     align-items: center;
-    margin-bottom: 12rem;
+    margin-bottom: 6rem;
 }
 
 .hero-content {
@@ -30,7 +26,6 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    padding-top: 2rem;
 }
 
 .hero-text {
@@ -74,8 +69,6 @@ body {
 .hero-image {
     flex: 1;
     position: relative;
-    margin-bottom: -15%;
-    margin-right: -5%;
     max-height: 600px;
 }
 
@@ -88,124 +81,6 @@ body {
     max-height: 600px;
     object-fit: cover;
 }
-
-
-/* Responsive styles */
-
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-    }
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    .hero-image {
-        margin-bottom: -10%;
-    }
-}
-
-
-/* Improved Responsive Design */
-
-@media (max-width: 1024px) {
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-    .about-content h2 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 0.8rem 5%;
-    }
-    .hero {
-        padding: 6rem 5% 3rem;
-        min-height: auto;
-    }
-    .hero-content,
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    .hero-image,
-    .about-image {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .nav-links {
-        display: none;
-    }
-    .about {
-        padding: 3rem 5%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 5rem 5% 2rem;
-    }
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero-text p,
-    .about-content p {
-        font-size: 0.9rem;
-    }
-    .shop-now,
-    .explore-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-}
-
-
-/* Animations */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-    .services-grid .container {
-        grid-template-columns: 1fr;
-    }
-    .service-card {
-        margin: 0 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-    .services-intro h2 {
-        font-size: 2rem;
-    }
-}
-
 
 /* cool section */
 
@@ -440,20 +315,76 @@ body {
     margin-bottom: 1rem;
     line-height: 1.6;
 }
+/* Animations */
 
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 3rem;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    .hero-content p {
-        font-size: 1.2rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+    }
 
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        padding-right: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .journey .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .values-grid .container {
+        padding: 2rem 1rem;
+    }
+
+    .value-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .learn-more {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .services-intro h2 {
+        font-size: 2rem;
+    }
+}
 /* Add these font imports at the top of your CSS file */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
