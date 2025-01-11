@@ -1,4 +1,5 @@
 /* Base Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,84 +7,26 @@ body {
     background-color: #FDF6E3;
 }
 
-/* Hero section */
+
+/* Header Section */
+
 .hero {
-    padding: 1rem 5%;
-    background-color: #2F3E2F;
-    color: white;
-    position: relative;
-    min-height: 80vh;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    margin-bottom: 6rem;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 80px;
 }
 
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.hero-text {
-    flex: 0.8;
-    padding-right: 2rem;
-}
-
-.hero-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
-
-.hero-text p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    opacity: 0.85;
-}
-
-.learn-more {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 0.8rem 2rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Arial', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-.learn-more:hover {
-    background: white;
-    color: #2F3E2F;
-}
-
-.hero-image {
-    flex: 1;
-    position: relative;
-    max-height: 600px;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-height: 600px;
-    object-fit: cover;
-    margin-top: 100px;
-}
 
 /* Our Mission */
+
 .our-mission {
     text-align: center;
     padding: 4rem 2rem;
@@ -103,7 +46,9 @@ body {
     color: #666;
 }
 
+
 /* Values Grid */
+
 .values-grid .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,7 +81,9 @@ body {
     color: #333;
 }
 
+
 /* Journey Section */
+
 .journey .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -164,68 +111,9 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 100px;
-        min-height: auto;
-    }
 
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
+/* WhatsApp Float Button */
 
-    .hero-text {
-        padding-right: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .journey .container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .values-grid .container {
-        padding: 2rem 1rem;
-    }
-
-    .value-card {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding-top: 80px;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
-    }
-
-    .learn-more {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.8rem;
-    }
-
-    .our-mission h2,
-    .journey-content h2 {
-        font-size: 2rem;
-    }
-
-    .our-mission p {
-        font-size: 1rem;
-    }
-}
 .whatsapp-float {
     position: fixed;
     bottom: 40px;
@@ -253,7 +141,9 @@ body {
     transform: scale(1.1);
 }
 
+
 /* For mobile devices */
+
 @media screen and (max-width: 767px) {
     .whatsapp-float {
         width: 50px;
