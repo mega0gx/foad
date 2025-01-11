@@ -73,6 +73,7 @@ body {
 }
 
 .hero-image img {
+    margin-top: 120px;
     max-width: 100%;
     height: auto;
     display: block;
