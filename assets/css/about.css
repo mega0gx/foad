@@ -220,7 +220,6 @@ body {
 
 .our-mission {
     text-align: center;
-    background-color: #FDF6E3;
 }
 
 .our-mission h2 {
@@ -274,9 +273,10 @@ body {
 
 /* Journey Section */
 
-.journey {
+
+/* .journey {
     background-color: #FDF6E3;
-}
+} */
 
 .journey .container {
     display: grid;
