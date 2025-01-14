@@ -1,0 +1,767 @@
+/* contain header  , footer , hero , whatsapp  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header Styles */
+
+header {
+    padding: 1.5rem 5%;
+    background: rgb(213, 255, 135);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.join-btn {
+    background: #4CAF50;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background: #45a049;
+}
+
+
+/* Menu Button Styles */
+
+.menu-btn {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 2000;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+
+/* Animation */
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+
+/* Hover underline effect */
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #4CAF50;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        z-index: 1000;
+    }
+    .nav-links.open {
+        right: 0;
+    }
+    .nav-links li {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.5s ease-in-out;
+    }
+    .nav-links.open li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    /* Staggered animation for list items */
+    .nav-links li:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .nav-links li:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+    .nav-links li:nth-child(4) {
+        transition-delay: 0.5s;
+    }
+    .nav-links li:nth-child(5) {
+        transition-delay: 0.6s;
+    }
+    .nav-links li:nth-child(6) {
+        transition-delay: 0.7s;
+    }
+    .nav-links a {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
+
+/* Initial navbar styles */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    /* Adjust to match your design */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hide navbar when scrolling down */
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+
+/* Show navbar when scrolling up */
+
+header.visible {
+    transform: translateY(0);
+}
+
+
+/* hero section style  */
+
+.hero {
+    position: relative;
+    height: 60vh;
+    /* Fixed height for consistency */
+    min-height: 400px;
+    /* Minimum height to ensure good appearance */
+    max-height: 600px;
+    /* Maximum height to prevent too much stretching */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 80px;
+    /* Account for fixed header */
+}
+
+
+/* Add overlay to make text more readable */
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Consistent dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* home hero style  */
+
+
+/* Hero container */
+
+.special-hero {
+    padding: 2rem 5%;
+    background: linear-gradient(135deg, #2F3E2F, #3C4F3C);
+    color: white;
+    position: relative;
+    min-height: 90vh;
+    /* A taller, more epic feel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center everything */
+    overflow: hidden;
+    /* Keep everything inside */
+}
+
+
+/* Inner content wrapper */
+
+.special-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+/* Text styling */
+
+.special-hero-text {
+    flex: 1;
+    padding-right: 2rem;
+    text-align: left;
+}
+
+.special-hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #F4F4F4;
+}
+
+.special-hero-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #D3D3D3;
+}
+
+.special-learn-more {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+}
+
+.special-learn-more:hover {
+    background: #3C8C42;
+    transform: scale(1.05);
+}
+
+
+/* Image styling */
+
+.special-hero-image {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+    /* Maintain aspect ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.special-hero-image img {
+    width: 100%;
+    height: 100%;
+    /* Prevent it from overflowing */
+    object-fit: cover;
+    /* Keeps the image ratio */
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.special-hero-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Make everything look perfect at all resolutions */
+
+@media (max-width: 768px) {
+    .special-hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .special-hero-text {
+        padding: 0;
+    }
+    .special-hero-image {
+        margin-top: 2rem;
+        max-width: 90%;
+    }
+}
+
+
+/* Footer Styles */
+
+.footer {
+    background: #2F3E2F;
+    color: #ffffff;
+    padding: 60px 0 20px;
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* Brand Column */
+
+.footer__column--info {
+    grid-column: span 1;
+}
+
+.footer__logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer__description {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+
+/* Social Icons */
+
+.footer__social {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+    background: #4CAF50;
+    transform: translateY(-3px);
+}
+
+.footer__social svg {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+}
+
+
+/* Menu Columns */
+
+.footer__column h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__menu li {
+    margin-bottom: 12px;
+}
+
+.footer__menu a {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer__menu a:hover {
+    color: #4CAF50;
+    transform: translateX(5px);
+}
+
+
+/* Newsletter */
+
+.footer__newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__newsletter-form input {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.footer__newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__newsletter-form button {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer__newsletter-form button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+
+/* Bottom Bar */
+
+.footer__bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer__copyright {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 990px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__column--info {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer__column--info {
+        grid-column: span 1;
+    }
+}
+
+
+/* WhatsApp Float Button */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    border-radius: 50px;
+    /* Changed to pill shape */
+    padding: 10px 20px 10px 15px;
+    /* Space for text */
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    color: white;
+    /* Text color */
+}
+
+
+/* WhatsApp icon */
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Text next to icon */
+
+.whatsapp-float::after {
+    content: 'Chat with us!';
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* Hover effects */
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    background: #22c15e;
+}
+
+.whatsapp-float:hover img {
+    transform: rotate(10deg);
+}
+
+
+/* Mobile responsiveness */
+
+@media screen and (max-width: 767px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+    }
+    .whatsapp-float img {
+        width: 26px;
+        height: 26px;
+    }
+    .whatsapp-float::after {
+        display: none;
+        /* Hide text on mobile */
+    }
+}
+
+
+/* Keep the bounce animation */
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-float {
+    animation: bounce 1s ease 1s;
+}
+
+
+/* Update logo styles in footer */
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer__logo-img {
+    width: 100px;
+    /* Adjust based on your logo size */
+    height: auto;
+    filter: brightness(0) invert(1);
+    /* Makes the logo white */
+    transition: transform 0.3s ease;
+}
+
+.footer__logo:hover .footer__logo-img {
+    transform: scale(1.05);
+}

@@ -1,27 +1,9 @@
-/* Base Styles */
+/* Add this at the top of about.css */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FDF6E3;
-}
-
-
-/* Header Section */
-
-.hero {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 80px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
@@ -29,21 +11,39 @@ body {
 
 .our-mission {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 2rem;
+    background: linear-gradient(to bottom, #f9f9f9, transparent);
+}
+
+.our-mission .container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .our-mission h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
 }
 
 .our-mission p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
     color: #666;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Add the separator */
+
+.our-mission .container::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #ffd966;
+    margin: 2rem auto;
 }
 
 
@@ -90,65 +90,32 @@ body {
     gap: 4rem;
     align-items: center;
     padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .journey-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
 }
 
 .journey-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
-    color: #666;
+    color: #555;
 }
 
 .journey-image img {
     width: 100%;
+    max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-
-/* WhatsApp Float Button */
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-
-/* For mobile devices */
-
-@media screen and (max-width: 767px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
+.journey-image img:hover {
+    transform: scale(1.05);
 }

@@ -1,6 +1,10 @@
+/* harvest section style */
+
 .harvest-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(to bottom, #f5f0e6, #ffffff);
+    margin-top: 0;
+    position: relative;
+    z-index: 0;
+    padding-top: 4rem;
 }
 
 .header-text {
@@ -19,19 +23,36 @@
     border-radius: 4px;
 }
 
-.category-nav ul {
+.category-nav {
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 900px;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+}
+
+.category-nav ul {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: auto;
+    min-width: fit-content;
 }
 
 .category-nav li {
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 2rem;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .category-nav li.active {
@@ -39,37 +60,25 @@
     color: white;
 }
 
-.category-nav li:hover:not(.active) {
-    background-color: #f0f0f0;
+.category-nav li:hover {
+    background-color: #ff5e00;
 }
 
 .stats-container {
-    background: linear-gradient(145deg, #3c2317, #2a1810);
+    background: linear-gradient(145deg, #3c2317, #7a3b20);
+    padding: 120px 40px 40px;
     border-radius: 20px;
-    padding: 8rem 2rem 3rem;
-    margin-top: -150px;
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    text-align: center;
+    margin-top: -60px;
     position: relative;
     z-index: 1;
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.2),
-        inset 0 -4px 8px rgba(255, 255, 255, 0.1),
-        inset 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .stats-container:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.25),
-        inset 0 -4px 8px rgba(255, 255, 255, 0.1),
-        inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), inset 0 -4px 8px rgba(255, 255, 255, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .stats-container::before {
@@ -79,18 +88,14 @@
     left: -50%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent
-    );
+    background: linear-gradient( to right, transparent, rgba(255, 255, 255, 0.05), transparent);
     transform: skewX(-15deg);
     pointer-events: none;
 }
 
 .stat-item {
     flex: 1;
+    text-align: center;
     padding: 0 1rem;
 }
 
@@ -98,6 +103,8 @@
     font-size: 3.5rem;
     margin: 0 0 1rem 0;
     font-weight: bold;
+    white-space: nowrap;
+    color: white;
 }
 
 .stat-item .number {
@@ -107,6 +114,7 @@
 .stat-item .unit {
     font-size: 1.5rem;
     opacity: 0.9;
+    color: rgb(252, 195, 195);
 }
 
 .stat-item .plus {
@@ -118,21 +126,21 @@
     font-size: 0.9rem;
     line-height: 1.5;
     opacity: 0.7;
+    color: #84e00a;
 }
 
 .vegetables-display {
     position: relative;
-    max-width: 900px;
-    margin: 3rem auto 0;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
     z-index: 2;
 }
 
 .vegetables-image {
     width: 100%;
     height: auto;
-    display: block;
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
+    position: relative;
+    bottom: -60px;
 }
 
 .vegetables-image {

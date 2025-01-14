@@ -11,7 +11,10 @@ async function loadProducts() {
             .filter(row => row.trim())
             .map(row => {
                 const [name, description] = row.split(',');
-                return { name, description };
+                return {
+                    name,
+                    description
+                };
             });
         // Get the container
         const container = document.getElementById('products-container');
@@ -19,16 +22,16 @@ async function loadProducts() {
         // Create product cards
         products.forEach(product => {
             const productCard = `
-                <div class="product-card" data-product-id="${product.name}">
-                    <div class="product-image">
-                        <img src="./assets/images/products/${product.name}.jpg" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                    </div>
+            <div class="product-card" data-product-id="${product.name}">
+                <div class="product-image">
+                    <img src="./assets/images/products/${product.name}.jpg" alt="${product.name}">
                 </div>
-            `;
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                </div>
+            </div>
+        `;
             container.innerHTML += productCard;
         });
     } catch (error) {

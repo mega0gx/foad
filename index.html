@@ -5,27 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/gallery.css">
+    <link rel="stylesheet" href="./assets/css/services.css">
+    <link rel="stylesheet" href="./assets/css/cool.css">
 </head>
 
 <body>
     <!-- header section -->
-    <div class="header"></div>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="Veggro Logo">
+            </div>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
+        <section class="special-hero">
+            <div class="special-hero-content">
+                <div class="special-hero-text">
                     <h1>A bold & contemporary<br>choice</h1>
                     <p>Featuring the freshest in our expanded range of seasonal products sourced throughout the year.</p>
-                    <button class="learn-more">LEARN MORE</button>
+                    <button class="special-learn-more">LEARN MORE</button>
                 </div>
-                <div class="hero-image">
-                    <img src="./assets/images/hero1.jpg" alt="Fresh Products">
+                <div class="special-hero-image">
+                    <img src="./assets/images/superhero.jpg" alt="Fresh Products">
                 </div>
             </div>
         </section>
-        <!-- Harvest Section (separate from hero) -->
+
         <section class="harvest-section">
             <div class="header-text">
                 <h1>Together, <span class="green-text">Harvest</span></h1>
@@ -38,9 +57,7 @@
                     <li>Leaf</li>
                     <li>Stem</li>
                     <li>Flowers</li>
-                    <li>Root</li>
                     <li>Legumes</li>
-                    <li>Mushroom</li>
                 </ul>
             </nav>
 
@@ -65,26 +82,245 @@
                 </div>
             </div>
         </section>
-        <!-- prodcut section from gallery.html -->
+
+        <section class="products-header">
+            <div class="products-header-container">
+                <span class="subtitle">Our Collection</span>
+                <h2>Fresh From Our Farms</h2>
+                <div class="separator">
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                </div>
+                <p>Discover our carefully curated selection of organic produce, harvested at peak freshness and delivered straight to your table.</p>
+            </div>
+        </section>
+
         <section class="products">
             <div class="container" id="products-container">
                 <!-- Products will be dynamically inserted here -->
             </div>
         </section>
 
+        <section class="services">
+            <section class="services-intro">
+                <div class="container">
+                    <h2>What We Offer</h2>
+                    <p>From farm to table, we provide comprehensive solutions that ensure quality, sustainability, and satisfaction at every step of the journey.</p>
+                </div>
+            </section>
+
+            <section class="services-grid">
+                <div class="container">
+                    <div class="service-card">
+                        <div class="icon">🌾</div>
+                        <h3>Fresh Produce Export</h3>
+                        <p>Direct farm-to-market distribution of premium fruits and vegetables, maintaining natural freshness and nutritional value throughout the journey.</p>
+                        <ul>
+                            <li>Quality Selection</li>
+                            <li>Fresh Harvesting</li>
+                            <li>Global Distribution</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">❄️</div>
+                        <h3>Frozen Solutions</h3>
+                        <p>State-of-the-art freezing technology that preserves the taste, texture, and nutrients of your favorite produce for extended shelf life.</p>
+                        <ul>
+                            <li>Flash Freezing</li>
+                            <li>Temperature Control</li>
+                            <li>Extended Freshness</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">📦</div>
+                        <h3>Custom Packaging</h3>
+                        <p>Innovative packaging solutions designed to protect products during transit while meeting specific client requirements and sustainability goals.</p>
+                        <ul>
+                            <li>Eco-friendly Options</li>
+                            <li>Custom Designs</li>
+                            <li>Protective Solutions</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">🚛</div>
+                        <h3>Supply Chain Management</h3>
+                        <p>End-to-end logistics solutions ensuring timely delivery and maintaining product quality throughout the distribution network.</p>
+                        <ul>
+                            <li>Global Network</li>
+                            <li>Real-time Tracking</li>
+                            <li>Quality Assurance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">🏆</div>
+                        <h3>Quality Certification</h3>
+                        <p>Rigorous quality control processes and international certification standards to guarantee premium-grade products.</p>
+                        <ul>
+                            <li>ISO Certification</li>
+                            <li>Quality Testing</li>
+                            <li>Safety Standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">📊</div>
+                        <h3>Market Advisory</h3>
+                        <p>Expert guidance on market trends, consumer preferences, and product selection to optimize your business strategy.</p>
+                        <ul>
+                            <li>Market Analysis</li>
+                            <li>Trend Insights</li>
+                            <li>Strategy Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="about-us">
+            <section class="our-mission">
+                <div class="container">
+                    <h2>Our Mission</h2>
+                    <p>We believe that good food is the foundation of a healthy life. Since 2010, we've been connecting local farmers with conscious consumers, bringing the freshest organic produce from farm to table.</p>
+                </div>
+            </section>
+
+            <section class="values-grid">
+                <div class="container">
+                    <div class="value-card">
+                        <img src="./assets/images/organic.png" alt="Organic farming">
+                        <h3>100% Organic</h3>
+                        <p>We partner exclusively with certified organic farmers who share our commitment to sustainable agriculture.</p>
+                    </div>
+                    <div class="value-card">
+                        <img src="./assets/images/local.png" alt="Local sourcing">
+                        <h3>Local First</h3>
+                        <p>By sourcing locally, we reduce our carbon footprint and support our community's economic growth.</p>
+                    </div>
+                    <div class="value-card">
+                        <img src="./assets/images/sustainable.png" alt="Sustainability">
+                        <h3>Sustainable Practices</h3>
+                        <p>From farm to packaging, we ensure every step of our process respects our environment.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="journey">
+                <div class="container">
+                    <div class="journey-content">
+                        <h2>Our Journey</h2>
+                        <p>What started as a small family farm has grown into a movement. Today, we work with over 100 local farmers, delivering fresh, organic produce to thousands of families across the region.</p>
+                        <p>Our commitment to sustainable agriculture isn't just about producing food – it's about nurturing our planet and creating a healthier future for generations to come.</p>
+                    </div>
+                    <div class="journey-image">
+                        <img src="./assets/images/farm-life.jpg" alt="Our farm life">
+                    </div>
+                </div>
+            </section>
+        </section>
+
     </main>
     <!-- footer section -->
-    <div class="footer"></div>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__grid">
+                <!-- Brand Column -->
+                <div class="footer__column footer__column--info">
+                    <a href="/" class="footer__logo">
+                        <img src="./assets/images/logo.png" alt="Foad Logo" class="footer__logo-img">
+                    </a>
+                    <p class="footer__description">Fresh from nature, direct to you. We connect local farmers with conscious consumers, bringing the freshest organic produce to your table.</p>
+                    <ul class="footer__social">
+                        <li>
+                            <a href="#" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M22 5.8a8.49 8.49 0 0 1-2.36.64 4.13 4.13 0 0 0 1.81-2.27 8.21 8.21 0 0 1-2.61 1 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.29 4.16 4.16 0 0 0-.55 2.07 4.09 4.09 0 0 0 1.82 3.41 4.05 4.05 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.86.07 4.11 4.11 0 0 0 3.83 2.84A8.22 8.22 0 0 1 3 18.34a11.57 11.57 0 0 0 6.29 1.85A11.59 11.59 0 0 0 21 8.45v-.53a8.43 8.43 0 0 0 2-2.12Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
+                <!-- Navigation Links -->
+                <div class="footer__column">
+                    <h3>Navigation</h3>
+                    <ul class="footer__menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer__column">
+                    <h3>Our Services</h3>
+                    <ul class="footer__menu">
+                        <li><a href="./services.html#export">Fresh Produce Export</a></li>
+                        <li><a href="./services.html#frozen">Frozen Solutions</a></li>
+                        <li><a href="./services.html#packaging">Custom Packaging</a></li>
+                        <li><a href="./services.html#supply">Supply Chain</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer__column footer__column--newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to our newsletter for updates and special offers!</p>
+                    <form class="footer__newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            Subscribe
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14m-7-7 7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2024 Foad. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
     </a>
 
-    <script src="./assets/js/layout.js"></script>
+    <!-- Js scripts -->
+    <script src="./assets/js/header.js"></script>
     <script src="./assets/js/products.js"></script>
-    <!-- Add Font Awesome for WhatsApp icon -->
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
