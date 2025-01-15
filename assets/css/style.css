@@ -252,37 +252,29 @@ header.visible {
 .hero {
     position: relative;
     height: 60vh;
-    /* Fixed height for consistency */
     min-height: 400px;
-    /* Minimum height to ensure good appearance */
     max-height: 600px;
-    /* Maximum height to prevent too much stretching */
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
     margin-top: 80px;
-    /* Account for fixed header */
+    overflow: hidden; /* Prevent image overflow */
 }
 
-
-/* Add overlay to make text more readable */
-
-.hero::before {
-    content: '';
+/* Hero image styles */
+.hero-img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    /* Consistent dark overlay */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     z-index: 1;
+    filter: brightness(0.6); /* Replaces the overlay */
 }
 
 .hero-content {
