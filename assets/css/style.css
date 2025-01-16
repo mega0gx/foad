@@ -333,7 +333,7 @@ header.visible {
     background: linear-gradient(135deg, #2F3E2F, #3C4F3C);
     color: white;
     position: relative;
-    min-height: 90vh;
+    min-height: 80vh;
     /* A taller, more epic feel */
     display: flex;
     align-items: center;
@@ -368,19 +368,23 @@ header.visible {
 .special-hero-text h1 {
     font-size: 3.6rem;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 100;
     margin-bottom: 1rem;
-    color: #F4F4F4;
-    font-family: cursive;
+    color: #f4f4f4;
+    font-family: CustomFont;
 }
 
 .special-hero-text p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-family: fantasy;
+    font-size: 25px;
     line-height: 1.8;
     margin-bottom: 2rem;
-    opacity: 0.9;
-    color: #D3D3D3;
+    opacity: 1;
+    color: #a03b00;
+}
+
+.special-hero-text h2 {
+    color: #ffffff;
 }
 
 .special-hero p span {
@@ -409,6 +413,7 @@ header.visible {
 /* Image styling */
 
 .special-hero-image {
+    padding-top: 10dvh;
     flex: 1;
     max-width: 500px;
     height: auto;
