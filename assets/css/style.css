@@ -33,17 +33,36 @@ nav {
     max-height: 50px;
     width: auto;
 }
+
+@font-face {
+    font-family: 'CustomFont';
+    /* Name your font family */
+    src: url('../bazooka.ttf');
+    /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+    font-family: 'arabicf';
+    /* Name your font family */
+    src: url('../117-Barada-Reqa.ttf');
+    /* Locate the .ttf file within your directory*/
+}
+
 .header .logo p {
-    color: rgb(15 146 69);
-    font-weight: bolder;
-    font-family: cursive;
+    color: rgb(15, 146, 69);
+    /* Use commas for RGB values */
+    /* font-weight: bolder; */
+    /* Make text bolder */
+    font-family: 'CustomFont';
+    /* Use custom font with a fallback */
     position: absolute;
     bottom: 2px;
 }
 
-.header .logo p span{
-    color: rgb(201, 201, 201);
+.header .logo p span {
+    color: rgb(143, 10, 10);
     font-weight: bolder;
+    font-family: arabicf;
     font-size: 25px;
 }
 
@@ -273,10 +292,13 @@ header.visible {
     text-align: center;
     padding: 2rem;
     margin-top: 80px;
-    overflow: hidden; /* Prevent image overflow */
+    overflow: hidden;
+    /* Prevent image overflow */
 }
 
+
 /* Hero image styles */
+
 .hero-img {
     position: absolute;
     top: 0;
@@ -286,7 +308,8 @@ header.visible {
     object-fit: cover;
     object-position: center;
     z-index: 1;
-    filter: brightness(0.6); /* Replaces the overlay */
+    filter: brightness(0.6);
+    /* Replaces the overlay */
 }
 
 .hero-content {
@@ -384,6 +407,7 @@ header.visible {
     opacity: 0.9;
     color: #D3D3D3;
 }
+
 .special-hero p span {
     color: white;
 }
@@ -405,7 +429,6 @@ header.visible {
     background: #3C8C42;
     transform: scale(1.05);
 }
-
 
 
 /* Image styling */
@@ -448,19 +471,19 @@ header.visible {
         padding-top: 100px;
     }
     .special-hero-image {
-        order: -1; 
+        order: -1;
         max-width: 80%;
     }
     .special-hero-text {
         padding: 0;
     }
-    .special-hero-text h1{
+    .special-hero-text h1 {
         font-size: 30px;
     }
-    .special-hero-text p{
+    .special-hero-text p {
         font-size: 13px;
     }
-    .special-hero-text button{
+    .special-hero-text button {
         font-weight: bold;
     }
 }
