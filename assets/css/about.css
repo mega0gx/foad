@@ -119,3 +119,31 @@
 .journey-image img:hover {
     transform: scale(1.05);
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .journey .container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 2rem; /* Reduce gap for smaller screens */
+        padding: 2rem 1rem; /* Adjust padding for mobile */
+    }
+
+    .journey-content h2 {
+        font-size: 2rem; /* Reduce heading size for mobile */
+    }
+
+    .journey-content p {
+        font-size: 1rem; /* Reduce paragraph size for mobile */
+    }
+
+    .journey-image img {
+        max-width: 100%;
+        display: none;
+    }
+}
+
+
+
+
+.journey-image img:hover {
+    transform: scale(1.05);
+}
