@@ -122,17 +122,17 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .journey .container {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 2rem; /* Reduce gap for smaller screens */
-        padding: 2rem 1rem; /* Adjust padding for mobile */
+        grid-template-columns: 1fr;
+        gap: 2rem; 
+        padding: 2rem 1rem; 
     }
 
     .journey-content h2 {
-        font-size: 2rem; /* Reduce heading size for mobile */
+        font-size: 2rem; 
     }
 
     .journey-content p {
-        font-size: 1rem; /* Reduce paragraph size for mobile */
+        font-size: 1rem; 
     }
 
     .journey-image img {
@@ -140,9 +140,6 @@
         display: none;
     }
 }
-
-
-
 
 .journey-image img:hover {
     transform: scale(1.05);
