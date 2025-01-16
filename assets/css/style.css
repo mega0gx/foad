@@ -368,22 +368,23 @@ header.visible {
 .special-hero-text h1 {
     font-size: 3.6rem;
     line-height: 1.2;
-    font-weight: 100;
+    font-weight: 600;
     margin-bottom: 1rem;
-    color: #f4f4f4;
-    font-family: CustomFont;
+    color: #F4F4F4;
+    font-family: cursive;
+    white-space: nowrap;
 }
 
 .special-hero-text p {
-    font-family: fantasy;
-    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    opacity: 1;
-    color: #a03b00;
+    opacity: 0.9;
+    color: #D3D3D3;
 }
 
-.special-hero-text h2 {
+.special-hero-text h3 {
     color: #ffffff;
 }
 
@@ -413,7 +414,6 @@ header.visible {
 /* Image styling */
 
 .special-hero-image {
-    padding-top: 10dvh;
     flex: 1;
     max-width: 500px;
     height: auto;
@@ -424,6 +424,7 @@ header.visible {
     align-items: center;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px);
 }
 
 .special-hero-image img {
