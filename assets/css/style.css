@@ -368,12 +368,12 @@ header.visible {
 }
 
 .special-hero-text h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 3.6rem;
     line-height: 1.2;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #F4F4F4;
+    font-family: cursive;
 }
 
 .special-hero-text p {
@@ -383,6 +383,9 @@ header.visible {
     margin-bottom: 2rem;
     opacity: 0.9;
     color: #D3D3D3;
+}
+.special-hero p span {
+    color: white;
 }
 
 .special-learn-more {
@@ -402,6 +405,7 @@ header.visible {
     background: #3C8C42;
     transform: scale(1.05);
 }
+
 
 
 /* Image styling */
@@ -449,6 +453,15 @@ header.visible {
     }
     .special-hero-text {
         padding: 0;
+    }
+    .special-hero-text h1{
+        font-size: 30px;
+    }
+    .special-hero-text p{
+        font-size: 13px;
+    }
+    .special-hero-text button{
+        font-weight: bold;
     }
 }
 
