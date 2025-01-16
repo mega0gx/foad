@@ -302,7 +302,7 @@ header.visible {
 @media (max-width: 768px) {
     .hero {
         height: 50vh;
-        min-height: 300px;
+        min-height: 400px;
     }
     .hero-content h1 {
         font-size: 2.5rem;
