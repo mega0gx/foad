@@ -371,7 +371,7 @@ header.visible {
     font-weight: 600;
     margin-bottom: 1rem;
     color: #F4F4F4;
-    font-family: cursive;
+    font-family: CustomFont;
     white-space: nowrap;
 }
 
