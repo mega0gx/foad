@@ -368,8 +368,8 @@ header.visible {
 .special-hero-text h1 {
     font-size: 3.6rem;
     line-height: 1.2;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: 1;
+    margin-bottom: 0rem;
     color: #F4F4F4;
     font-family: CustomFont;
     white-space: nowrap;
