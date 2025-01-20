@@ -1,0 +1,72 @@
+<section class="contact">
+    <div class="container">
+        <div class="contactInfo">
+            <div class="info-content">
+                <h2>Contact Information</h2>
+                <p>Get in touch with us for any questions about our organic products</p>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:contact@yourcompany.com">contact@yourcompany.com</a></p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-location-dot"></i>
+                    <p>123 Organic Street, Nature City, Earth</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100044779852420" target="_blank" class="social-icon">
+                        <img src="./assets/images/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://instagram.com/yourpage" target="_blank" class="social-icon">
+                        <img src="./assets/images/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="social-icon">
+                        <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactForm">
+            <h2>Send us a Message</h2>
+            <form id="contactForm" onsubmit="return sendEmail(event)">
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" name="firstName" required>
+                            <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="lastName" required>
+                            <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" name="email" required>
+                            <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="tel" name="phone" required>
+                            <span>Phone Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="message" required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <span class="btn-text"></span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
